@@ -102,7 +102,7 @@ button {
   border-bottom-color: var(--line);
 }
 
-.mobile-menu a {
+.mobile-nav-link {
   display: flex;
   align-items: center;
   padding: 15px 4px;
@@ -114,11 +114,11 @@ button {
   text-decoration: none;
 }
 
-.mobile-menu a:hover {
+.mobile-nav-link:hover {
   color: var(--ink);
 }
 
-.mobile-menu a:last-of-type {
+.mobile-nav-link:last-of-type {
   border-bottom: none;
 }
 

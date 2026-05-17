@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from 'react'
 import { useDict, useLocale } from '@/i18n/useDict'
+import { LOCALES, LOCALE_LABELS, type Locale } from '@/i18n/config'
 import LanguageSwitcher from './LanguageSwitcher'
 
 const SECTION_IDS = ['services', 'why', 'team', 'contact']
@@ -171,7 +172,10 @@ export default function Nav() {
 
           {/* right cluster */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
-            <LanguageSwitcher />
+            {/* language switcher — desktop only; mobile gets it inside the drawer */}
+            <span className="hidden md:block">
+              <LanguageSwitcher />
+            </span>
 
             {/* desktop CTA */}
             <a
@@ -276,6 +280,7 @@ export default function Nav() {
             key={href}
             href={href}
             onClick={closeMenu}
+            className="mobile-nav-link"
             style={{ color: active === id ? 'var(--ink)' : 'var(--ink-2)' }}
           >
             {active === id && (
@@ -287,7 +292,6 @@ export default function Nav() {
                   borderRadius: '50%',
                   background: 'var(--accent)',
                   marginRight: 10,
-                  verticalAlign: 'middle',
                   flexShrink: 0,
                 }}
               />
@@ -295,6 +299,39 @@ export default function Nav() {
             {label}
           </a>
         ))}
+        {/* language picker — grid of pills */}
+        <div style={{ padding: '16px 4px 4px', display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+          {LOCALES.map((loc) => {
+            const isCurrent = loc === locale
+            return (
+              <a
+                key={loc}
+                href={`/${loc}`}
+                onClick={closeMenu}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '7px 14px',
+                  borderRadius: 999,
+                  fontSize: 12,
+                  fontFamily: 'var(--font-jetbrains-mono)',
+                  letterSpacing: '0.06em',
+                  border: '1px solid',
+                  borderColor: isCurrent ? 'var(--accent)' : 'var(--line)',
+                  color: isCurrent ? 'var(--accent)' : 'var(--ink-3)',
+                  background: isCurrent ? 'rgba(212,255,90,.08)' : 'transparent',
+                  textDecoration: 'none',
+                  // override the global .mobile-menu a border-bottom
+                  borderBottom: isCurrent ? '1px solid var(--accent)' : '1px solid var(--line)',
+                }}
+              >
+                {LOCALE_LABELS[loc as Locale]}
+              </a>
+            )
+          })}
+        </div>
+
         <a href="#contact" onClick={closeMenu} className="mobile-cta">
           {nav.cta}
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
