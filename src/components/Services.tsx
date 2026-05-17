@@ -49,7 +49,24 @@ function GlyphPhoto() {
   )
 }
 
-const GLYPHS: Array<() => React.ReactElement> = [GlyphIT, GlyphDesign, GlyphSocial, GlyphPhoto]
+function GlyphHelpDesk() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      {/* headset arc */}
+      <path d="M5 15 C5 8 23 8 23 15" stroke="var(--accent)" strokeWidth="1" fill="none" />
+      {/* left ear cup */}
+      <rect x="3" y="14" width="5" height="7" rx="2" fill="var(--accent)" />
+      {/* right ear cup */}
+      <rect x="20" y="14" width="5" height="7" rx="2" fill="var(--accent)" />
+      {/* mic arm */}
+      <path d="M23 19 Q26 21 24 24" stroke="var(--accent)" strokeWidth="1" fill="none" strokeLinecap="round" />
+      {/* mic dot */}
+      <circle cx="23.5" cy="24.5" r="1.5" fill="var(--accent)" />
+    </svg>
+  )
+}
+
+const GLYPHS: Array<() => React.ReactElement> = [GlyphIT, GlyphDesign, GlyphSocial, GlyphPhoto, GlyphHelpDesk]
 
 // ── tilt card ─────────────────────────────────────────────────────────────────
 
@@ -188,7 +205,7 @@ function ServiceCard({
 
 // ── section ───────────────────────────────────────────────────────────────────
 
-const NUMS = ['01 / IT', '02 / DSN', '03 / SMM', '04 / P+V']
+const NUMS = ['01 / IT', '02 / DSN', '03 / SMM', '04 / P+V', '05 / HELP']
 
 export default function Services() {
   const { services } = useDict()

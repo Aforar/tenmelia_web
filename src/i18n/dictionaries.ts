@@ -38,7 +38,7 @@ export type Dict = {
     heading: string
     headingAccent: string
     sub: string
-    items: [ServiceItem, ServiceItem, ServiceItem, ServiceItem]
+    items: [ServiceItem, ServiceItem, ServiceItem, ServiceItem, ServiceItem]
   }
   why: {
     label: string
@@ -86,14 +86,14 @@ const en: Dict = {
     line1: 'Built to',
     accent: 'perform.',
     line2: 'Made to last.',
-    sub: 'Four disciplines under one roof: engineering, design, social, and production. We ship complete work, end to end.',
+    sub: 'Five disciplines under one roof: engineering, design, social, production, and support. We ship complete work, end to end.',
     cta: 'Start a project',
     seeServices: 'See services',
     dragHint: 'Drag to rotate',
   },
   services: {
     label: '02 — Services',
-    heading: 'Four services.',
+    heading: 'Five services.',
     headingAccent: 'One team.',
     sub: 'You get the same producers, designers, and engineers from kickoff to launch. No subcontractors. No handoffs.',
     items: [
@@ -112,6 +112,10 @@ const en: Dict = {
       {
         title: 'Photo & Video Production',
         body: 'We shoot, edit, and deliver. From product stills to brand films, the footage lands, the cut tells the story.',
+      },
+      {
+        title: 'Help Desk',
+        body: 'We are your first and last line of support. Issues get logged, tracked, and resolved — fast, with a human on the other end.',
       },
     ],
   },
@@ -182,7 +186,7 @@ const ar: Dict = {
   },
   services: {
     label: '02 — الخدمات',
-    heading: 'أربع خدمات.',
+    heading: 'خمس خدمات.',
     headingAccent: 'فريق واحد.',
     sub: 'تحصل على نفس المنتجين والمصممين والمهندسين من البداية حتى الإطلاق. لا مقاولين من الباطن. لا تسليمات.',
     items: [
@@ -201,6 +205,10 @@ const ar: Dict = {
       {
         title: 'التصوير والإنتاج المرئي',
         body: 'نصوّر، ونُحرّر، ونُسلّم. من الصور الثابتة إلى الأفلام التعريفية، اللقطة تصل والمونتاج يروي القصة.',
+      },
+      {
+        title: 'مكتب المساعدة',
+        body: 'نحن خط الدعم الأول والأخير. تُسجَّل المشكلات وتُتابَع وتُحَل بسرعة، ودائمًا بإنسان حقيقي في الطرف الآخر.',
       },
     ],
   },
@@ -271,7 +279,7 @@ const es: Dict = {
   },
   services: {
     label: '02 — Servicios',
-    heading: 'Cuatro servicios.',
+    heading: 'Cinco servicios.',
     headingAccent: 'Un equipo.',
     sub: 'Los mismos productores, diseñadores e ingenieros desde el inicio hasta el lanzamiento. Sin subcontratistas. Sin traspasos.',
     items: [
@@ -290,6 +298,10 @@ const es: Dict = {
       {
         title: 'Producción Foto & Video',
         body: 'Grabamos, editamos y entregamos. Desde fotografías de producto hasta películas de marca, las tomas impactan y el montaje cuenta la historia.',
+      },
+      {
+        title: 'Mesa de Ayuda',
+        body: 'Somos tu primera y última línea de soporte. Los problemas se registran, rastrean y resuelven rápido, con una persona real al otro lado.',
       },
     ],
   },
@@ -360,7 +372,7 @@ const fr: Dict = {
   },
   services: {
     label: '02 — Services',
-    heading: 'Quatre services.',
+    heading: 'Cinq services.',
     headingAccent: 'Une équipe.',
     sub: 'Les mêmes producteurs, designers et ingénieurs du lancement au déploiement. Pas de sous-traitants. Pas de transferts.',
     items: [
@@ -379,6 +391,10 @@ const fr: Dict = {
       {
         title: 'Production Photo & Vidéo',
         body: "Nous tournons, montons et livrons. Des visuels produit aux films de marque, les images frappent et le montage raconte l'histoire.",
+      },
+      {
+        title: "Service d'Assistance",
+        body: "Nous sommes votre première et dernière ligne de support. Les problèmes sont enregistrés, suivis et résolus rapidement, avec un humain à l'autre bout.",
       },
     ],
   },
@@ -449,7 +465,7 @@ const zh: Dict = {
   },
   services: {
     label: '02 — 服务',
-    heading: '四项服务。',
+    heading: '五项服务。',
     headingAccent: '一支团队。',
     sub: '从启动到发布，同一批制作人、设计师和工程师全程陪伴。无外包，无交接。',
     items: [
@@ -468,6 +484,10 @@ const zh: Dict = {
       {
         title: '摄影与视频制作',
         body: '我们拍摄、剪辑并交付。从产品静图到品牌影片，画面震撼，剪辑叙事。',
+      },
+      {
+        title: '服务台支持',
+        body: '我们是您的第一道也是最后一道支持防线。问题被记录、跟踪并快速解决——始终有真人在另一端响应。',
       },
     ],
   },
@@ -538,7 +558,7 @@ const ru: Dict = {
   },
   services: {
     label: '02 — Услуги',
-    heading: 'Четыре услуги.',
+    heading: 'Пять услуг.',
     headingAccent: 'Одна команда.',
     sub: 'Одни и те же продюсеры, дизайнеры и инженеры от старта до запуска. Без субподрядчиков. Без передачи.',
     items: [
@@ -557,6 +577,10 @@ const ru: Dict = {
       {
         title: 'Фото и видеопроизводство',
         body: 'Снимаем, монтируем и сдаём. От предметных фото до имиджевых фильмов — кадр работает, монтаж рассказывает историю.',
+      },
+      {
+        title: 'Служба поддержки',
+        body: 'Мы — ваша первая и последняя линия поддержки. Проблемы фиксируются, отслеживаются и решаются быстро, с живым человеком на другом конце.',
       },
     ],
   },
@@ -627,7 +651,7 @@ const pl: Dict = {
   },
   services: {
     label: '02 — Usługi',
-    heading: 'Cztery usługi.',
+    heading: 'Pięć usług.',
     headingAccent: 'Jeden zespół.',
     sub: 'Ci sami producenci, designerzy i inżynierowie od kickoffu do premiery. Bez podwykonawców. Bez przekazywania.',
     items: [
@@ -646,6 +670,10 @@ const pl: Dict = {
       {
         title: 'Produkcja Foto & Wideo',
         body: 'Nagrywamy, montujemy i dostarczamy. Od zdjęć produktowych po filmy brandingowe — obraz trafia, montaż opowiada historię.',
+      },
+      {
+        title: 'Pomoc Techniczna',
+        body: 'Jesteśmy Twoją pierwszą i ostatnią linią wsparcia. Zgłoszenia są rejestrowane, śledzone i rozwiązywane szybko — zawsze przez człowieka.',
       },
     ],
   },
