@@ -63,6 +63,15 @@ export type Dict = {
     accent: string
     body: string
     cta: string
+    form: {
+      namePlaceholder: string
+      emailPlaceholder: string
+      servicesLabel: string
+      descriptionPlaceholder: string
+      submit: string
+      successTitle: string
+      successBody: string
+    }
   }
   footer: {
     /** Use {year} as placeholder — replaced at render time */
@@ -157,6 +166,15 @@ const en: Dict = {
     accent: 'you are.',
     body: 'Tell us what you are building, and we will get back within one business day with a scope, a price, and a start date.',
     cta: 'Start a project',
+    form: {
+      namePlaceholder: 'Full name or company',
+      emailPlaceholder: 'your@email.com',
+      servicesLabel: 'Service interest',
+      descriptionPlaceholder: 'Tell us about your project…',
+      submit: 'Send message',
+      successTitle: 'Message sent',
+      successBody: "We'll be in touch within one business day.",
+    },
   },
   footer: {
     copy: '© {year} Tinmelia Studio',
@@ -250,6 +268,15 @@ const ar: Dict = {
     accent: 'متى شئت.',
     body: 'أخبرنا بما تبنيه، وسنعود إليك خلال يوم عمل واحد بنطاق العمل والسعر وتاريخ البدء.',
     cta: 'ابدأ مشروعًا',
+    form: {
+      namePlaceholder: 'الاسم الكامل أو اسم الشركة',
+      emailPlaceholder: 'بريدك@الإلكتروني.com',
+      servicesLabel: 'الخدمة المطلوبة',
+      descriptionPlaceholder: 'أخبرنا عن مشروعك…',
+      submit: 'إرسال الرسالة',
+      successTitle: 'تم الإرسال',
+      successBody: 'سنتواصل معك خلال يوم عمل واحد.',
+    },
   },
   footer: {
     copy: '© {year} Tinmelia Studio',
@@ -343,6 +370,15 @@ const es: Dict = {
     accent: 'tú lo estés.',
     body: 'Cuéntanos qué estás construyendo y te responderemos en un día hábil con un alcance, un precio y una fecha de inicio.',
     cta: 'Iniciar proyecto',
+    form: {
+      namePlaceholder: 'Nombre completo o empresa',
+      emailPlaceholder: 'tu@email.com',
+      servicesLabel: 'Servicio de interés',
+      descriptionPlaceholder: 'Cuéntanos sobre tu proyecto…',
+      submit: 'Enviar mensaje',
+      successTitle: 'Mensaje enviado',
+      successBody: 'Te responderemos en un día hábil.',
+    },
   },
   footer: {
     copy: '© {year} Tinmelia Studio',
@@ -436,6 +472,15 @@ const fr: Dict = {
     accent: "vous l'êtes.",
     body: "Dites-nous ce que vous construisez, et nous vous répondrons dans un jour ouvré avec un périmètre, un prix et une date de début.",
     cta: 'Démarrer un projet',
+    form: {
+      namePlaceholder: 'Nom complet ou entreprise',
+      emailPlaceholder: 'votre@email.com',
+      servicesLabel: 'Service souhaité',
+      descriptionPlaceholder: 'Parlez-nous de votre projet…',
+      submit: 'Envoyer le message',
+      successTitle: 'Message envoyé',
+      successBody: 'Nous vous répondrons dans un jour ouvré.',
+    },
   },
   footer: {
     copy: '© {year} Tinmelia Studio',
@@ -529,6 +574,15 @@ const zh: Dict = {
     accent: '准备就绪。',
     body: '告诉我们您在构建什么，我们将在一个工作日内回复您，并提供方案范围、报价和启动日期。',
     cta: '开始项目',
+    form: {
+      namePlaceholder: '姓名或公司名称',
+      emailPlaceholder: 'your@email.com',
+      servicesLabel: '感兴趣的服务',
+      descriptionPlaceholder: '请描述您的项目……',
+      submit: '发送消息',
+      successTitle: '消息已发送',
+      successBody: '我们将在一个工作日内与您联系。',
+    },
   },
   footer: {
     copy: '© {year} Tinmelia Studio',
@@ -622,6 +676,15 @@ const ru: Dict = {
     accent: 'захотите вы.',
     body: 'Расскажите, что вы создаёте, — мы ответим в течение одного рабочего дня с описанием объёма, ценой и датой старта.',
     cta: 'Начать проект',
+    form: {
+      namePlaceholder: 'Имя или название компании',
+      emailPlaceholder: 'ваш@email.com',
+      servicesLabel: 'Интересующая услуга',
+      descriptionPlaceholder: 'Расскажите о вашем проекте…',
+      submit: 'Отправить сообщение',
+      successTitle: 'Сообщение отправлено',
+      successBody: 'Мы свяжемся с вами в течение одного рабочего дня.',
+    },
   },
   footer: {
     copy: '© {year} Tinmelia Studio',
@@ -715,6 +778,15 @@ const pl: Dict = {
     accent: 'Ty będziesz.',
     body: 'Powiedz nam, co budujesz, a odpowiemy w jeden dzień roboczy z zakresem, ceną i datą startu.',
     cta: 'Rozpocznij projekt',
+    form: {
+      namePlaceholder: 'Pełna nazwa lub firma',
+      emailPlaceholder: 'twoj@email.com',
+      servicesLabel: 'Interesująca usługa',
+      descriptionPlaceholder: 'Opowiedz nam o swoim projekcie…',
+      submit: 'Wyślij wiadomość',
+      successTitle: 'Wiadomość wysłana',
+      successBody: 'Odezwiemy się w ciągu jednego dnia roboczego.',
+    },
   },
   footer: {
     copy: '© {year} Tinmelia Studio',
