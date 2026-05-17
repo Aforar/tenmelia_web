@@ -1,25 +1,55 @@
 // src/components/Nav.tsx
 'use client'
 
-import { useState } from 'react'
-import { useDict } from '@/i18n/useDict'
-import { useLocale } from '@/i18n/useDict'
+import { useState, useEffect } from 'react'
+import { useDict, useLocale } from '@/i18n/useDict'
 import LanguageSwitcher from './LanguageSwitcher'
+
+const SECTION_IDS = ['services', 'why', 'team', 'contact']
 
 export default function Nav() {
   const dict = useDict()
   const { nav } = dict
   const locale = useLocale()
-  const [menuOpen, setMenuOpen] = useState(false)
 
-  const links = [
-    { label: nav.services, href: '#services' },
-    { label: nav.why,      href: '#why' },
-    { label: nav.team,     href: '#team' },
-    { label: nav.contact,  href: '#contact' },
-  ]
+  const [menuOpen, setMenuOpen]   = useState(false)
+  const [scrolled, setScrolled]   = useState(false)
+  const [active, setActive]       = useState('')
+
+  /* ── scroll-aware background + active section tracking ── */
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 40)
+
+      // find which section is in the top half of the viewport
+      const hit = SECTION_IDS.find((id) => {
+        const el = document.getElementById(id)
+        if (!el) return false
+        const { top, bottom } = el.getBoundingClientRect()
+        return top <= 80 && bottom > 80
+      })
+      setActive(hit ?? '')
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  /* ── lock body scroll when mobile menu is open ── */
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [menuOpen])
 
   const closeMenu = () => setMenuOpen(false)
+
+  const links = [
+    { label: nav.services, href: '#services', id: 'services' },
+    { label: nav.why,      href: '#why',      id: 'why' },
+    { label: nav.team,     href: '#team',     id: 'team' },
+    { label: nav.contact,  href: '#contact',  id: 'contact' },
+  ]
 
   return (
     <>
@@ -30,17 +60,22 @@ export default function Nav() {
           left: 0,
           right: 0,
           zIndex: 50,
-          backdropFilter: 'blur(14px)',
-          WebkitBackdropFilter: 'blur(14px)',
-          background: 'linear-gradient(180deg, rgba(12,11,9,.88), rgba(12,11,9,.6))',
-          borderBottom: '1px solid rgba(243,239,230,.06)',
+          backdropFilter: scrolled ? 'blur(18px)' : 'none',
+          WebkitBackdropFilter: scrolled ? 'blur(18px)' : 'none',
+          background: scrolled
+            ? 'rgba(12,11,9,.90)'
+            : 'transparent',
+          borderBottom: scrolled
+            ? '1px solid rgba(243,239,230,.08)'
+            : '1px solid transparent',
+          transition: 'background .35s ease, border-color .35s ease, backdrop-filter .35s ease',
         }}
       >
         <div
+          className="nav-inner"
           style={{
             maxWidth: 1320,
             margin: '0 auto',
-            padding: '0 20px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
@@ -80,25 +115,58 @@ export default function Nav() {
 
           {/* desktop nav links */}
           <ul
-            style={{ display: 'flex', gap: 34, listStyle: 'none' }}
             className="hidden md:flex"
+            style={{ display: 'flex', gap: 4, listStyle: 'none' }}
           >
-            {links.map(({ label, href }) => (
-              <li key={href}>
-                <a
-                  href={href}
-                  style={{ fontSize: 14, color: 'var(--ink-2)', transition: 'color .2s' }}
-                  onMouseEnter={(e) =>
-                    ((e.target as HTMLElement).style.color = 'var(--ink)')
-                  }
-                  onMouseLeave={(e) =>
-                    ((e.target as HTMLElement).style.color = 'var(--ink-2)')
-                  }
-                >
-                  {label}
-                </a>
-              </li>
-            ))}
+            {links.map(({ label, href, id }) => {
+              const isActive = active === id
+              return (
+                <li key={href}>
+                  <a
+                    href={href}
+                    style={{
+                      position: 'relative',
+                      display: 'inline-flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      gap: 4,
+                      padding: '6px 14px',
+                      borderRadius: 8,
+                      fontSize: 14,
+                      color: isActive ? 'var(--ink)' : 'var(--ink-2)',
+                      transition: 'color .2s, background .2s',
+                      background: isActive ? 'rgba(243,239,230,.06)' : 'transparent',
+                      textDecoration: 'none',
+                    }}
+                    onMouseEnter={(e) => {
+                      if (!isActive)
+                        (e.currentTarget as HTMLElement).style.color = 'var(--ink)'
+                    }}
+                    onMouseLeave={(e) => {
+                      if (!isActive)
+                        (e.currentTarget as HTMLElement).style.color = 'var(--ink-2)'
+                    }}
+                  >
+                    {label}
+                    {/* active dot */}
+                    <span
+                      style={{
+                        position: 'absolute',
+                        bottom: 4,
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        width: isActive ? 4 : 0,
+                        height: 4,
+                        borderRadius: '50%',
+                        background: 'var(--accent)',
+                        transition: 'width .25s ease',
+                        flexShrink: 0,
+                      }}
+                    />
+                  </a>
+                </li>
+              )
+            })}
           </ul>
 
           {/* right cluster */}
@@ -110,6 +178,7 @@ export default function Nav() {
               href="#contact"
               className="hidden md:inline-flex"
               style={{
+                display: 'inline-flex',
                 alignItems: 'center',
                 gap: 8,
                 padding: '10px 18px',
@@ -118,7 +187,8 @@ export default function Nav() {
                 fontWeight: 500,
                 background: 'var(--accent)',
                 color: 'var(--accent-ink)',
-                transition: 'transform .2s',
+                transition: 'transform .2s, opacity .2s',
+                textDecoration: 'none',
               }}
               onMouseEnter={(e) =>
                 ((e.currentTarget as HTMLElement).style.transform = 'translateY(-1px)')
@@ -144,62 +214,84 @@ export default function Nav() {
               className="md:hidden"
               onClick={() => setMenuOpen((o) => !o)}
               aria-label="Toggle menu"
+              aria-expanded={menuOpen}
               style={{
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
+                alignItems: 'center',
                 gap: 5,
-                width: 36,
-                height: 36,
-                padding: 6,
-                borderRadius: 8,
-                border: '1px solid var(--line)',
+                width: 40,
+                height: 40,
+                padding: 8,
+                borderRadius: 10,
+                border: '1px solid',
+                borderColor: menuOpen ? 'rgba(243,239,230,.18)' : 'var(--line)',
                 background: menuOpen ? 'rgba(243,239,230,.06)' : 'transparent',
-                transition: 'background .2s',
+                transition: 'background .2s, border-color .2s',
                 flexShrink: 0,
               }}
             >
-              <span
-                style={{
-                  display: 'block',
-                  height: 1.5,
-                  background: 'var(--ink-2)',
-                  borderRadius: 2,
-                  transition: 'transform .25s, opacity .25s',
-                  transformOrigin: 'center',
-                  transform: menuOpen ? 'translateY(6.5px) rotate(45deg)' : 'none',
-                }}
-              />
-              <span
-                style={{
-                  display: 'block',
-                  height: 1.5,
-                  background: 'var(--ink-2)',
-                  borderRadius: 2,
-                  transition: 'opacity .2s',
-                  opacity: menuOpen ? 0 : 1,
-                }}
-              />
-              <span
-                style={{
-                  display: 'block',
-                  height: 1.5,
-                  background: 'var(--ink-2)',
-                  borderRadius: 2,
-                  transition: 'transform .25s, opacity .25s',
-                  transformOrigin: 'center',
-                  transform: menuOpen ? 'translateY(-6.5px) rotate(-45deg)' : 'none',
-                }}
-              />
+              {[
+                menuOpen ? 'translateY(6.5px) rotate(45deg)' : 'none',
+                'none', // middle
+                menuOpen ? 'translateY(-6.5px) rotate(-45deg)' : 'none',
+              ].map((transform, i) => (
+                <span
+                  key={i}
+                  style={{
+                    display: 'block',
+                    width: 18,
+                    height: 1.5,
+                    background: 'var(--ink-2)',
+                    borderRadius: 2,
+                    transition: 'transform .25s cubic-bezier(.22,1,.36,1), opacity .2s',
+                    transform,
+                    opacity: i === 1 && menuOpen ? 0 : 1,
+                  }}
+                />
+              ))}
             </button>
           </div>
         </div>
       </nav>
 
-      {/* mobile slide-down menu */}
+      {/* mobile backdrop — closes menu on outside tap */}
+      {menuOpen && (
+        <div
+          onClick={closeMenu}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 46,
+            background: 'rgba(0,0,0,.4)',
+          }}
+        />
+      )}
+
+      {/* mobile slide-down drawer */}
       <div className={`mobile-menu${menuOpen ? ' open' : ''}`}>
-        {links.map(({ label, href }) => (
-          <a key={href} href={href} onClick={closeMenu}>
+        {links.map(({ label, href, id }) => (
+          <a
+            key={href}
+            href={href}
+            onClick={closeMenu}
+            style={{ color: active === id ? 'var(--ink)' : 'var(--ink-2)' }}
+          >
+            {active === id && (
+              <span
+                style={{
+                  display: 'inline-block',
+                  width: 5,
+                  height: 5,
+                  borderRadius: '50%',
+                  background: 'var(--accent)',
+                  marginRight: 10,
+                  verticalAlign: 'middle',
+                  flexShrink: 0,
+                }}
+              />
+            )}
             {label}
           </a>
         ))}
