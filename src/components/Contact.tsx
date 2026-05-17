@@ -224,6 +224,7 @@ export default function Contact() {
           {submitted ? (
             /* success state */
             <div
+              className="contact-success"
               style={{
                 padding: '48px 40px',
                 border: '1px solid var(--line)',
@@ -302,7 +303,8 @@ export default function Contact() {
                         type="button"
                         onClick={() => toggleService(title)}
                         style={{
-                          padding: '8px 16px',
+                          padding: '10px 16px',
+                          minHeight: 44,
                           borderRadius: 999,
                           fontSize: 13,
                           fontWeight: 500,

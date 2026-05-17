@@ -52,14 +52,18 @@ function IcosahedronScene() {
       scrollY.current = window.scrollY
     }
     const onMove = (e: PointerEvent) => {
+      const isMobile = window.innerWidth < 768
+      const dragScale = isMobile ? 0.003 : 0.006
+      const hoverScaleX = isMobile ? 0.25 : 0.6
+      const hoverScaleY = isMobile ? 0.15 : 0.4
       if (dragging.current) {
-        targetX.current += (e.clientX - lastPX.current) * 0.006
-        targetY.current += (e.clientY - lastPY.current) * 0.006
+        targetX.current += (e.clientX - lastPX.current) * dragScale
+        targetY.current += (e.clientY - lastPY.current) * dragScale
         lastPX.current = e.clientX
         lastPY.current = e.clientY
       } else {
-        targetX.current = 0.3 + (e.clientX / window.innerWidth - 0.5) * 0.6
-        targetY.current = -0.2 + (e.clientY / window.innerHeight - 0.5) * 0.4
+        targetX.current = 0.3 + (e.clientX / window.innerWidth - 0.5) * hoverScaleX
+        targetY.current = -0.2 + (e.clientY / window.innerHeight - 0.5) * hoverScaleY
       }
     }
     const onUp = () => {
