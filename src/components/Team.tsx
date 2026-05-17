@@ -14,6 +14,7 @@ export default function Team() {
     <section
       id="team"
       ref={sectionRef}
+      className="section-pad"
       style={{
         position: 'relative',
         overflow: 'hidden',
@@ -23,8 +24,9 @@ export default function Team() {
         padding: '140px 0',
       }}
     >
-      <div style={{ maxWidth: 1320, margin: '0 auto', padding: '0 40px' }}>
+      <div className="inner-pad" style={{ maxWidth: 1320, margin: '0 auto', padding: '0 40px' }}>
         <div
+          className="team-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 440px), 1fr))',
@@ -127,6 +129,7 @@ export default function Team() {
 
           {/* right — perspective-tilted roster panel */}
           <motion.aside
+            className="team-roster"
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-80px' }}

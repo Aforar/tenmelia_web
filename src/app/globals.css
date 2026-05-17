@@ -60,3 +60,167 @@ button {
   background: var(--accent);
   border-radius: 2px;
 }
+
+/* ── Mobile nav drawer ────────────────────────────────────────────────────── */
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  z-index: 48;
+  background: rgba(12, 11, 9, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--line);
+  padding: 24px 20px 32px;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu a,
+.mobile-menu button {
+  display: block;
+  padding: 14px 0;
+  font-size: 17px;
+  color: var(--ink-2);
+  border-bottom: 1px solid var(--line-2);
+  transition: color 0.2s;
+  text-align: left;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.mobile-menu a:hover,
+.mobile-menu button:hover {
+  color: var(--ink);
+}
+
+.mobile-menu a:last-child {
+  border-bottom: none;
+}
+
+.mobile-cta {
+  margin-top: 20px;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 22px !important;
+  border-radius: 999px !important;
+  font-size: 15px !important;
+  font-weight: 500;
+  background: var(--accent) !important;
+  color: var(--accent-ink) !important;
+  text-align: center;
+  justify-content: center;
+  border: none !important;
+}
+
+/* ── Responsive layout ────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  /* Tighten section vertical padding */
+  .section-pad {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+  }
+
+  /* Tighten horizontal container padding */
+  .inner-pad {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* Hero content area */
+  .hero-content {
+    padding: 80px 20px 60px !important;
+  }
+
+  /* Contact section */
+  .contact-section {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+  }
+
+  /* Team: collapse gap and remove 3D tilt */
+  .team-grid {
+    gap: 40px !important;
+  }
+
+  .team-roster {
+    transform: none !important;
+    padding: 20px !important;
+  }
+
+  /* Why: remove column separator when stacked */
+  .why-card {
+    border-inline-end: none !important;
+  }
+
+  /* Services: reduce card padding */
+  .service-card {
+    padding: 28px 24px !important;
+  }
+
+  /* Service card h3 */
+  .service-card h3 {
+    font-size: 26px !important;
+  }
+
+  /* Disable 3D tilt on touch devices */
+  .service-card,
+  .team-roster {
+    transform: none !important;
+  }
+
+  /* Form: stack name+email on small screens */
+  .contact-form-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Language switcher: smaller on mobile */
+  .lang-switcher-dropdown {
+    right: 0;
+    left: auto;
+  }
+
+  /* Footer */
+  .footer-inner {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-pad {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+
+  .contact-section {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+  }
+
+  /* Service chips wrap nicely */
+  .service-chips {
+    gap: 6px !important;
+  }
+
+  .service-chips button {
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+  }
+}

@@ -21,6 +21,7 @@ function WhyCard({
 
   return (
     <motion.div
+      className="why-card"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
@@ -72,13 +73,14 @@ export default function Why() {
   return (
     <section
       id="why"
+      className="section-pad"
       style={{
         background: 'var(--bg)',
         borderTop: '1px solid var(--line-2)',
         padding: '140px 0',
       }}
     >
-      <div style={{ maxWidth: 1320, margin: '0 auto', padding: '0 40px' }}>
+      <div className="inner-pad" style={{ maxWidth: 1320, margin: '0 auto', padding: '0 40px' }}>
         {/* header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

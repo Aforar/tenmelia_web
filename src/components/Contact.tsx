@@ -104,6 +104,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
+      className="contact-section"
       style={{
         position: 'relative',
         padding: '160px 0',
@@ -139,6 +140,7 @@ export default function Contact() {
       />
 
       <div
+        className="inner-pad"
         style={{
           position: 'relative',
           maxWidth: 1320,
@@ -257,6 +259,7 @@ export default function Contact() {
 
               {/* name + email row */}
               <div
+                className="contact-form-row"
                 style={{
                   display: 'grid',
                   gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
@@ -290,7 +293,7 @@ export default function Contact() {
                 >
                   {contact.form.servicesLabel}
                 </p>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                <div className="service-chips" style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                   {serviceNames.map((title) => {
                     const active = selected.includes(title)
                     return (

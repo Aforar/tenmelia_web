@@ -110,6 +110,7 @@ function ServiceCard({
   return (
     <motion.article
       ref={cardRef as React.RefObject<HTMLElement>}
+      className="service-card"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
@@ -211,8 +212,8 @@ export default function Services() {
   const { services } = useDict()
 
   return (
-    <section id="services" style={{ background: 'var(--bg)', padding: '140px 0' }}>
-      <div style={{ maxWidth: 1320, margin: '0 auto', padding: '0 40px' }}>
+    <section id="services" className="section-pad" style={{ background: 'var(--bg)', padding: '140px 0' }}>
+      <div className="inner-pad" style={{ maxWidth: 1320, margin: '0 auto', padding: '0 40px' }}>
         {/* section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

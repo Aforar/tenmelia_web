@@ -18,6 +18,7 @@ export default function Footer() {
       }}
     >
       <div
+        className="footer-inner"
         style={{
           maxWidth: 1320,
           margin: '0 auto',

@@ -62,6 +62,7 @@ export default function Hero() {
 
       {/* hero content */}
       <div
+        className="hero-content"
         style={{
           position: 'relative',
           zIndex: 2,
