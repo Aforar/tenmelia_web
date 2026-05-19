@@ -189,12 +189,12 @@ export default function Team() {
 
             {/* roster rows */}
             <div>
-              {team.roster.map(({ idx, role, count }, i) => (
+              {team.roster.map(({ idx, role }, i) => (
                 <div
                   key={idx}
                   style={{
                     display: 'grid',
-                    gridTemplateColumns: '24px 1fr auto',
+                    gridTemplateColumns: '24px 1fr',
                     gap: 16,
                     alignItems: 'center',
                     padding: '14px 0',
@@ -212,15 +212,6 @@ export default function Team() {
                     {idx}
                   </span>
                   <span style={{ fontSize: 15, color: 'var(--ink)' }}>{role}</span>
-                  <span
-                    style={{
-                      fontFamily: 'var(--font-jetbrains-mono)',
-                      fontSize: 13,
-                      color: 'var(--accent)',
-                    }}
-                  >
-                    {count}
-                  </span>
                 </div>
               ))}
             </div>

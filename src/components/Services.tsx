@@ -16,30 +16,6 @@ function GlyphIT() {
   )
 }
 
-function GlyphDesign() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-      <circle cx="14" cy="14" r="12" stroke="var(--accent)" strokeWidth="1" />
-      <path d="M2 14 A12 12 0 0 1 26 14 Z" fill="var(--accent)" />
-    </svg>
-  )
-}
-
-function GlyphSocial() {
-  const bars = [10, 20, 14, 28, 18]
-  const gap = 4
-  const w = 4
-  const totalW = bars.length * w + (bars.length - 1) * gap
-  const startX = (28 - totalW) / 2
-  return (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-      {bars.map((h, i) => (
-        <rect key={i} x={startX + i * (w + gap)} y={28 - h} width={w} height={h} fill="var(--accent)" />
-      ))}
-    </svg>
-  )
-}
-
 function GlyphPhoto() {
   return (
     <svg width="32" height="28" viewBox="0 0 36 28" fill="none">
@@ -66,7 +42,7 @@ function GlyphHelpDesk() {
   )
 }
 
-const GLYPHS: Array<() => React.ReactElement> = [GlyphIT, GlyphDesign, GlyphSocial, GlyphPhoto, GlyphHelpDesk]
+const GLYPHS: Array<() => React.ReactElement> = [GlyphIT, GlyphPhoto, GlyphHelpDesk]
 
 // ── tilt card ─────────────────────────────────────────────────────────────────
 
@@ -206,7 +182,7 @@ function ServiceCard({
 
 // ── section ───────────────────────────────────────────────────────────────────
 
-const NUMS = ['01 / IT', '02 / DSN', '03 / SMM', '04 / P+V', '05 / HELP']
+const NUMS = ['01 / IT', '02 / P+V', '03 / HELP']
 
 export default function Services() {
   const { services } = useDict()
