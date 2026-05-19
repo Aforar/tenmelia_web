@@ -173,8 +173,8 @@ const en: Dict = {
     },
   },
   footer: {
-    copy: '© {year} Tinmelia Studio',
-    version: 'v2.6 — Casablanca, Morocco',
+    copy: '© {year} Tinmelia',
+    version: 'v2.6',
   },
 }
 
@@ -271,8 +271,8 @@ const ar: Dict = {
     },
   },
   footer: {
-    copy: '© {year} Tinmelia Studio',
-    version: 'v2.6 — الدار البيضاء، المغرب',
+    copy: '© {year} Tinmelia',
+    version: 'v2.6',
   },
 }
 
@@ -369,8 +369,8 @@ const es: Dict = {
     },
   },
   footer: {
-    copy: '© {year} Tinmelia Studio',
-    version: 'v2.6 — Casablanca, Marruecos',
+    copy: '© {year} Tinmelia',
+    version: 'v2.6',
   },
 }
 
@@ -467,8 +467,8 @@ const fr: Dict = {
     },
   },
   footer: {
-    copy: '© {year} Tinmelia Studio',
-    version: 'v2.6 — Casablanca, Maroc',
+    copy: '© {year} Tinmelia',
+    version: 'v2.6',
   },
 }
 
@@ -565,8 +565,8 @@ const zh: Dict = {
     },
   },
   footer: {
-    copy: '© {year} Tinmelia Studio',
-    version: 'v2.6 — 卡萨布兰卡，摩洛哥',
+    copy: '© {year} Tinmelia',
+    version: 'v2.6',
   },
 }
 
@@ -663,8 +663,8 @@ const ru: Dict = {
     },
   },
   footer: {
-    copy: '© {year} Tinmelia Studio',
-    version: 'v2.6 — Касабланка, Марокко',
+    copy: '© {year} Tinmelia',
+    version: 'v2.6',
   },
 }
 
@@ -761,8 +761,8 @@ const pl: Dict = {
     },
   },
   footer: {
-    copy: '© {year} Tinmelia Studio',
-    version: 'v2.6 — Casablanca, Maroko',
+    copy: '© {year} Tinmelia',
+    version: 'v2.6',
   },
 }
 

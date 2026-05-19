@@ -254,28 +254,17 @@ export default function Hero() {
             {hero.dragHint}
           </span>
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 4, textAlign: 'right' }}>
-          <span
-            style={{
-              fontFamily: 'var(--font-jetbrains-mono)',
-              fontSize: 11,
-              color: 'var(--ink-2)',
-            }}
-          >
-            42.6936° N — 23.3222° E
-          </span>
-          <span
-            style={{
-              fontFamily: 'var(--font-jetbrains-mono)',
-              fontSize: 11,
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              color: 'var(--ink-2)',
-            }}
-          >
-            Sofia · Studio
-          </span>
-        </div>
+        <span
+          style={{
+            fontFamily: 'var(--font-jetbrains-mono)',
+            fontSize: 11,
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+            color: 'var(--ink-2)',
+          }}
+        >
+          Tinmelia
+        </span>
       </div>
     </header>
   )
