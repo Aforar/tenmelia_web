@@ -16,6 +16,15 @@ function GlyphIT() {
   )
 }
 
+function GlyphDesign() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <circle cx="14" cy="14" r="12" stroke="var(--accent)" strokeWidth="1" />
+      <path d="M2 14 A12 12 0 0 1 26 14 Z" fill="var(--accent)" />
+    </svg>
+  )
+}
+
 function GlyphPhoto() {
   return (
     <svg width="32" height="28" viewBox="0 0 36 28" fill="none">
@@ -42,7 +51,7 @@ function GlyphHelpDesk() {
   )
 }
 
-const GLYPHS: Array<() => React.ReactElement> = [GlyphIT, GlyphPhoto, GlyphHelpDesk]
+const GLYPHS: Array<() => React.ReactElement> = [GlyphIT, GlyphDesign, GlyphPhoto, GlyphHelpDesk]
 
 // ── tilt card ─────────────────────────────────────────────────────────────────
 
@@ -182,7 +191,7 @@ function ServiceCard({
 
 // ── section ───────────────────────────────────────────────────────────────────
 
-const NUMS = ['01 / IT', '02 / P+V', '03 / HELP']
+const NUMS = ['01 / IT', '02 / DSN', '03 / P+V', '04 / HELP']
 
 export default function Services() {
   const { services } = useDict()

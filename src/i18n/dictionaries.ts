@@ -38,7 +38,7 @@ export type Dict = {
     heading: string
     headingAccent: string
     sub: string
-    items: [ServiceItem, ServiceItem, ServiceItem]
+    items: [ServiceItem, ServiceItem, ServiceItem, ServiceItem]
   }
   why: {
     label: string
@@ -53,7 +53,7 @@ export type Dict = {
     headingAccent: string
     body: string
     stats: [StatItem, StatItem, StatItem, StatItem]
-    roster: [RosterItem, RosterItem, RosterItem, RosterItem]
+    roster: [RosterItem, RosterItem, RosterItem, RosterItem, RosterItem]
     rosterLabel: string
     onlineLabel: string
   }
@@ -95,20 +95,24 @@ const en: Dict = {
     line1: 'Built to',
     accent: 'perform.',
     line2: 'Made to last.',
-    sub: 'Three disciplines under one roof: engineering, production, and support. We ship complete work, end to end.',
+    sub: 'Four disciplines under one roof: engineering, design, production, and support. We ship complete work, end to end.',
     cta: 'Start a project',
     seeServices: 'See services',
     dragHint: 'Drag to rotate',
   },
   services: {
     label: '02 — Services',
-    heading: 'Three services.',
+    heading: 'Four services.',
     headingAccent: 'One team.',
-    sub: 'You get the same producers and engineers from kickoff to launch. No subcontractors. No handoffs.',
+    sub: 'You get the same producers, designers, and engineers from kickoff to launch. No handoffs.',
     items: [
       {
         title: 'IT Solutions',
         body: 'We build the systems your business runs on. From infrastructure to custom software, your stack stays fast, secure, and ready to scale.',
+      },
+      {
+        title: 'Design',
+        body: 'We design brands, products, and interfaces that work. Every pixel earns its place, every system holds up under pressure.',
       },
       {
         title: 'Photo & Video Production',
@@ -126,7 +130,7 @@ const en: Dict = {
     headingAccent: 'No fluff.',
     sub: 'Most agencies sell process. We sell output. Here is what changes when you work with us.',
     items: [
-      { before: 'You get one team across three disciplines, so ', accent: 'nothing falls between the cracks.', after: '' },
+      { before: 'You get one team across four disciplines, so ', accent: 'nothing falls between the cracks.', after: '' },
       { before: 'You see real work in ', accent: 'days, not months', after: ' — we ship in tight, weekly cycles.' },
       { before: 'You own everything we make — ', accent: 'files, footage, source code, accounts.', after: '' },
     ],
@@ -135,18 +139,19 @@ const en: Dict = {
     label: '04 — Team',
     heading: 'Expert team.',
     headingAccent: 'One account lead.',
-    body: 'Engineers, producers, and support specialists work on your project in-house — no subcontractors, no agency middle layer. You get one lead, direct access to the team, and a channel that stays open until launch.',
+    body: 'Engineers, designers, producers, and support specialists work on your project in-house. You get one lead, direct access to the team, and a channel that stays open until launch.',
     stats: [
       { v: '+4 yrs', l: 'Experience' },
-      { v: '0', l: 'Subcontractors' },
+      { v: 'Casablanca', l: 'Morocco' },
       { v: '100%', l: 'Work owned by you' },
       { v: '< 24h', l: 'Reply time' },
     ],
     roster: [
       { idx: '01', role: 'Engineering & DevOps' },
-      { idx: '02', role: 'Photo, Video & Motion' },
-      { idx: '03', role: 'Help Desk & Support' },
-      { idx: '04', role: 'Account & Production' },
+      { idx: '02', role: 'Brand & Product Design' },
+      { idx: '03', role: 'Photo, Video & Motion' },
+      { idx: '04', role: 'Help Desk & Support' },
+      { idx: '05', role: 'Account & Production' },
     ],
     rosterLabel: '// roster.json',
     onlineLabel: '● ONLINE',
@@ -169,7 +174,7 @@ const en: Dict = {
   },
   footer: {
     copy: '© {year} Tinmelia Studio',
-    version: 'v2.6 — Sofia / Remote',
+    version: 'v2.6 — Casablanca, Morocco',
   },
 }
 
@@ -188,20 +193,24 @@ const ar: Dict = {
     line1: 'بُني للأداء',
     accent: 'والإتقان.',
     line2: 'صُنع ليدوم.',
-    sub: 'ثلاثة تخصصات تحت سقف واحد: هندسة، إنتاج، ودعم. نُسلّم عملًا متكاملًا من البداية للنهاية.',
+    sub: 'أربعة تخصصات تحت سقف واحد: هندسة، تصميم، إنتاج، ودعم. نُسلّم عملًا متكاملًا من البداية للنهاية.',
     cta: 'ابدأ مشروعًا',
     seeServices: 'استعرض الخدمات',
     dragHint: 'اسحب للتدوير',
   },
   services: {
     label: '02 — الخدمات',
-    heading: 'ثلاث خدمات.',
+    heading: 'أربع خدمات.',
     headingAccent: 'فريق واحد.',
-    sub: 'تحصل على نفس المنتجين والمهندسين من البداية حتى الإطلاق. لا مقاولين من الباطن. لا تسليمات.',
+    sub: 'تحصل على نفس المنتجين والمصممين والمهندسين من البداية حتى الإطلاق. لا تسليمات.',
     items: [
       {
         title: 'حلول تقنية',
         body: 'نبني الأنظمة التي تعمل عليها أعمالك. من البنية التحتية إلى البرمجيات المخصصة، يظل مجموعك التقني سريعًا وآمنًا وجاهزًا للتوسع.',
+      },
+      {
+        title: 'التصميم',
+        body: 'نصمم هويات وأنظمة ومنتجات تعمل. كل بكسل يؤدي دوره، وكل نظام يصمد تحت الضغط.',
       },
       {
         title: 'التصوير والإنتاج المرئي',
@@ -219,7 +228,7 @@ const ar: Dict = {
     headingAccent: 'بلا حشو.',
     sub: 'معظم الوكالات تبيع عمليات. نحن نبيع نتائج. إليك ما يتغير حين تعمل معنا.',
     items: [
-      { before: 'تحصل على فريق واحد عبر ثلاثة تخصصات، لذا ', accent: 'لا شيء يضيع بين الثغرات.', after: '' },
+      { before: 'تحصل على فريق واحد عبر أربعة تخصصات، لذا ', accent: 'لا شيء يضيع بين الثغرات.', after: '' },
       { before: 'ترى عملًا حقيقيًا في ', accent: 'أيام، لا شهور', after: ' — نشحن في دورات أسبوعية محكمة.' },
       { before: 'تمتلك كل ما نصنعه — ', accent: 'الملفات، اللقطات، الكود المصدري، الحسابات.', after: '' },
     ],
@@ -228,18 +237,19 @@ const ar: Dict = {
     label: '04 — الفريق',
     heading: 'فريق متخصص.',
     headingAccent: 'مسؤول حساب واحد.',
-    body: 'يعمل المهندسون والمنتجون ومتخصصو الدعم على مشروعك داخليًا — بلا مقاولين من الباطن ولا وسيط. تحصل على مسؤول واحد، ووصول مباشر للفريق، وقناة مفتوحة حتى الإطلاق.',
+    body: 'يعمل المهندسون والمصممون والمنتجون ومتخصصو الدعم على مشروعك داخليًا. تحصل على مسؤول واحد، ووصول مباشر للفريق، وقناة مفتوحة حتى الإطلاق.',
     stats: [
       { v: '+4 سنوات', l: 'خبرة' },
-      { v: '0', l: 'مقاولين من الباطن' },
+      { v: 'الدار البيضاء', l: 'المغرب' },
       { v: '100%', l: 'العمل ملكك' },
       { v: '< 24 ساعة', l: 'وقت الرد' },
     ],
     roster: [
       { idx: '01', role: 'هندسة وعمليات' },
-      { idx: '02', role: 'تصوير وفيديو وموشن' },
-      { idx: '03', role: 'مكتب المساعدة والدعم' },
-      { idx: '04', role: 'إدارة حسابات وإنتاج' },
+      { idx: '02', role: 'هوية وتصميم منتجات' },
+      { idx: '03', role: 'تصوير وفيديو وموشن' },
+      { idx: '04', role: 'مكتب المساعدة والدعم' },
+      { idx: '05', role: 'إدارة حسابات وإنتاج' },
     ],
     rosterLabel: '// roster.json',
     onlineLabel: '● متصل',
@@ -262,7 +272,7 @@ const ar: Dict = {
   },
   footer: {
     copy: '© {year} Tinmelia Studio',
-    version: 'v2.6 — صوفيا / عن بُعد',
+    version: 'v2.6 — الدار البيضاء، المغرب',
   },
 }
 
@@ -281,20 +291,24 @@ const es: Dict = {
     line1: 'Construido para',
     accent: 'rendir.',
     line2: 'Hecho para durar.',
-    sub: 'Tres disciplinas bajo un mismo techo: ingeniería, producción y soporte. Entregamos trabajo completo, de principio a fin.',
+    sub: 'Cuatro disciplinas bajo un mismo techo: ingeniería, diseño, producción y soporte. Entregamos trabajo completo, de principio a fin.',
     cta: 'Iniciar proyecto',
     seeServices: 'Ver servicios',
     dragHint: 'Arrastra para rotar',
   },
   services: {
     label: '02 — Servicios',
-    heading: 'Tres servicios.',
+    heading: 'Cuatro servicios.',
     headingAccent: 'Un equipo.',
-    sub: 'Los mismos productores e ingenieros desde el inicio hasta el lanzamiento. Sin subcontratistas. Sin traspasos.',
+    sub: 'Los mismos productores, diseñadores e ingenieros desde el inicio hasta el lanzamiento. Sin traspasos.',
     items: [
       {
         title: 'Soluciones IT',
         body: 'Construimos los sistemas en los que opera tu empresa. Desde infraestructura hasta software personalizado, tu stack se mantiene rápido, seguro y listo para escalar.',
+      },
+      {
+        title: 'Diseño',
+        body: 'Diseñamos marcas, productos e interfaces que funcionan. Cada píxel gana su lugar, cada sistema aguanta la presión.',
       },
       {
         title: 'Producción Foto & Video',
@@ -312,7 +326,7 @@ const es: Dict = {
     headingAccent: 'Sin relleno.',
     sub: 'La mayoría de las agencias venden procesos. Nosotros vendemos resultados. Esto es lo que cambia cuando trabajas con nosotros.',
     items: [
-      { before: 'Tienes un equipo en tres disciplinas, así que ', accent: 'nada cae entre las grietas.', after: '' },
+      { before: 'Tienes un equipo en cuatro disciplinas, así que ', accent: 'nada cae entre las grietas.', after: '' },
       { before: 'Ves trabajo real en ', accent: 'días, no meses', after: ' — entregamos en ciclos semanales ajustados.' },
       { before: 'Eres dueño de todo lo que hacemos — ', accent: 'archivos, metraje, código fuente, cuentas.', after: '' },
     ],
@@ -321,18 +335,19 @@ const es: Dict = {
     label: '04 — Equipo',
     heading: 'Equipo experto.',
     headingAccent: 'Un responsable de cuenta.',
-    body: 'Ingenieros, productores y especialistas de soporte trabajan en tu proyecto internamente — sin subcontratistas, sin intermediarios. Tienes un responsable, acceso directo al equipo y un canal abierto hasta el lanzamiento.',
+    body: 'Ingenieros, diseñadores, productores y especialistas de soporte trabajan en tu proyecto internamente. Tienes un responsable, acceso directo al equipo y un canal abierto hasta el lanzamiento.',
     stats: [
       { v: '+4 años', l: 'Experiencia' },
-      { v: '0', l: 'Subcontratistas' },
+      { v: 'Casablanca', l: 'Marruecos' },
       { v: '100%', l: 'El trabajo es tuyo' },
       { v: '< 24h', l: 'Tiempo de respuesta' },
     ],
     roster: [
       { idx: '01', role: 'Ingeniería & DevOps' },
-      { idx: '02', role: 'Foto, Video & Movimiento' },
-      { idx: '03', role: 'Mesa de Ayuda & Soporte' },
-      { idx: '04', role: 'Cuenta & Producción' },
+      { idx: '02', role: 'Marca & Diseño de Producto' },
+      { idx: '03', role: 'Foto, Video & Movimiento' },
+      { idx: '04', role: 'Mesa de Ayuda & Soporte' },
+      { idx: '05', role: 'Cuenta & Producción' },
     ],
     rosterLabel: '// roster.json',
     onlineLabel: '● EN LÍNEA',
@@ -355,7 +370,7 @@ const es: Dict = {
   },
   footer: {
     copy: '© {year} Tinmelia Studio',
-    version: 'v2.6 — Sofía / Remoto',
+    version: 'v2.6 — Casablanca, Marruecos',
   },
 }
 
@@ -374,20 +389,24 @@ const fr: Dict = {
     line1: 'Conçu pour',
     accent: 'performer.',
     line2: 'Fait pour durer.',
-    sub: "Trois disciplines sous un même toit : ingénierie, production et support. Nous livrons un travail complet, de bout en bout.",
+    sub: 'Quatre disciplines sous un même toit : ingénierie, design, production et support. Nous livrons un travail complet, de bout en bout.',
     cta: 'Démarrer un projet',
     seeServices: 'Voir les services',
     dragHint: 'Glisser pour pivoter',
   },
   services: {
     label: '02 — Services',
-    heading: 'Trois services.',
+    heading: 'Quatre services.',
     headingAccent: 'Une équipe.',
-    sub: 'Les mêmes producteurs et ingénieurs du lancement au déploiement. Pas de sous-traitants. Pas de transferts.',
+    sub: 'Les mêmes producteurs, designers et ingénieurs du lancement au déploiement. Pas de transferts.',
     items: [
       {
         title: 'Solutions IT',
         body: "Nous construisons les systèmes sur lesquels repose votre entreprise. De l'infrastructure aux logiciels sur mesure, votre stack reste rapide, sécurisé et prêt à évoluer.",
+      },
+      {
+        title: 'Design',
+        body: 'Nous concevons des marques, des produits et des interfaces qui fonctionnent. Chaque pixel justifie sa présence, chaque système tient sous pression.',
       },
       {
         title: 'Production Photo & Vidéo',
@@ -405,7 +424,7 @@ const fr: Dict = {
     headingAccent: 'Sans rembourrage.',
     sub: 'La plupart des agences vendent un processus. Nous vendons des résultats. Voici ce qui change quand vous travaillez avec nous.',
     items: [
-      { before: 'Vous avez une équipe sur trois disciplines, donc ', accent: 'rien ne tombe dans les failles.', after: '' },
+      { before: 'Vous avez une équipe sur quatre disciplines, donc ', accent: 'rien ne tombe dans les failles.', after: '' },
       { before: 'Vous voyez un vrai travail en ', accent: 'jours, pas en mois', after: ' — nous livrons en cycles hebdomadaires serrés.' },
       { before: 'Vous possédez tout ce que nous créons — ', accent: 'fichiers, séquences, code source, comptes.', after: '' },
     ],
@@ -414,18 +433,19 @@ const fr: Dict = {
     label: '04 — Équipe',
     heading: 'Équipe experte.',
     headingAccent: 'Un chef de compte.',
-    body: "Ingénieurs, producteurs et spécialistes du support travaillent sur votre projet en interne — pas de sous-traitants, pas d'intermédiaire. Vous avez un responsable, un accès direct à l'équipe et un canal ouvert jusqu'au lancement.",
+    body: "Ingénieurs, designers, producteurs et spécialistes du support travaillent sur votre projet en interne. Vous avez un responsable, un accès direct à l'équipe et un canal ouvert jusqu'au lancement.",
     stats: [
       { v: '+4 ans', l: 'Expérience' },
-      { v: '0', l: 'Sous-traitants' },
+      { v: 'Casablanca', l: 'Maroc' },
       { v: '100%', l: 'Le travail vous appartient' },
       { v: '< 24h', l: 'Temps de réponse' },
     ],
     roster: [
       { idx: '01', role: 'Ingénierie & DevOps' },
-      { idx: '02', role: 'Photo, Vidéo & Motion' },
-      { idx: '03', role: "Service d'Assistance" },
-      { idx: '04', role: 'Compte & Production' },
+      { idx: '02', role: 'Identité & Design Produit' },
+      { idx: '03', role: 'Photo, Vidéo & Motion' },
+      { idx: '04', role: "Service d'Assistance" },
+      { idx: '05', role: 'Compte & Production' },
     ],
     rosterLabel: '// roster.json',
     onlineLabel: '● EN LIGNE',
@@ -448,7 +468,7 @@ const fr: Dict = {
   },
   footer: {
     copy: '© {year} Tinmelia Studio',
-    version: 'v2.6 — Sofia / Distant',
+    version: 'v2.6 — Casablanca, Maroc',
   },
 }
 
@@ -467,20 +487,24 @@ const zh: Dict = {
     line1: '专为',
     accent: '高效而生。',
     line2: '经久不衰。',
-    sub: '三大专业融于一体：工程、制作与支持。我们从头到尾交付完整的工作成果。',
+    sub: '四大专业融于一体：工程、设计、制作与支持。我们从头到尾交付完整的工作成果。',
     cta: '开始项目',
     seeServices: '查看服务',
     dragHint: '拖动旋转',
   },
   services: {
     label: '02 — 服务',
-    heading: '三项服务。',
+    heading: '四项服务。',
     headingAccent: '一支团队。',
-    sub: '从启动到发布，同一批制作人和工程师全程陪伴。无外包，无交接。',
+    sub: '从启动到发布，同一批制作人、设计师和工程师全程陪伴。无交接。',
     items: [
       {
         title: 'IT 解决方案',
         body: '我们构建企业运营所依赖的系统。从基础设施到定制软件，您的技术栈始终保持快速、安全、随时可扩展。',
+      },
+      {
+        title: '设计',
+        body: '我们设计能真正发挥作用的品牌、产品和界面。每个像素都有其意义，每个系统都经得住考验。',
       },
       {
         title: '摄影与视频制作',
@@ -498,7 +522,7 @@ const zh: Dict = {
     headingAccent: '直接了当。',
     sub: '大多数代理机构兜售流程，我们兜售成果。以下是与我们合作后的改变。',
     items: [
-      { before: '您拥有一支覆盖三个专业的团队，因此 ', accent: '没有任何事情会被遗漏。', after: '' },
+      { before: '您拥有一支覆盖四个专业的团队，因此 ', accent: '没有任何事情会被遗漏。', after: '' },
       { before: '您能在 ', accent: '几天内，而非几个月', after: ' 看到真实成果——我们采用紧凑的每周迭代交付。' },
       { before: '我们创作的一切均归您所有—— ', accent: '文件、素材、源代码、账号。', after: '' },
     ],
@@ -507,18 +531,19 @@ const zh: Dict = {
     label: '04 — 团队',
     heading: '专业团队。',
     headingAccent: '一位客户负责人。',
-    body: '工程师、制作人和支持专家在内部直接参与您的项目——无外包，无中间层。您获得一位负责人、与团队的直接沟通渠道，以及一个在发布前始终开放的频道。',
+    body: '工程师、设计师、制作人和支持专家在内部直接参与您的项目。您获得一位负责人、与团队的直接沟通渠道，以及一个在发布前始终开放的频道。',
     stats: [
       { v: '+4 年', l: '经验' },
-      { v: '0', l: '外包' },
+      { v: '卡萨布兰卡', l: '摩洛哥' },
       { v: '100%', l: '成果归您所有' },
       { v: '< 24小时', l: '回复时间' },
     ],
     roster: [
       { idx: '01', role: '工程与 DevOps' },
-      { idx: '02', role: '摄影、视频与动效' },
-      { idx: '03', role: '服务台支持' },
-      { idx: '04', role: '客户管理与制作' },
+      { idx: '02', role: '品牌与产品设计' },
+      { idx: '03', role: '摄影、视频与动效' },
+      { idx: '04', role: '服务台支持' },
+      { idx: '05', role: '客户管理与制作' },
     ],
     rosterLabel: '// roster.json',
     onlineLabel: '● 在线',
@@ -541,7 +566,7 @@ const zh: Dict = {
   },
   footer: {
     copy: '© {year} Tinmelia Studio',
-    version: 'v2.6 — 索菲亚 / 远程',
+    version: 'v2.6 — 卡萨布兰卡，摩洛哥',
   },
 }
 
@@ -560,20 +585,24 @@ const ru: Dict = {
     line1: 'Создано для',
     accent: 'результата.',
     line2: 'Сделано навсегда.',
-    sub: 'Три направления под одной крышей: разработка, производство и поддержка. Мы сдаём законченный продукт — от начала до конца.',
+    sub: 'Четыре направления под одной крышей: разработка, дизайн, производство и поддержка. Мы сдаём законченный продукт — от начала до конца.',
     cta: 'Начать проект',
     seeServices: 'Посмотреть услуги',
     dragHint: 'Перетащить для вращения',
   },
   services: {
     label: '02 — Услуги',
-    heading: 'Три услуги.',
+    heading: 'Четыре услуги.',
     headingAccent: 'Одна команда.',
-    sub: 'Одни и те же продюсеры и инженеры от старта до запуска. Без субподрядчиков. Без передачи.',
+    sub: 'Одни и те же продюсеры, дизайнеры и инженеры от старта до запуска. Без передачи.',
     items: [
       {
         title: 'IT-решения',
         body: 'Мы строим системы, на которых работает ваш бизнес. От инфраструктуры до кастомного ПО — ваш стек остаётся быстрым, надёжным и готовым к масштабированию.',
+      },
+      {
+        title: 'Дизайн',
+        body: 'Мы создаём бренды, продукты и интерфейсы, которые работают. Каждый пиксель на своём месте, каждая система выдерживает давление.',
       },
       {
         title: 'Фото и видеопроизводство',
@@ -591,7 +620,7 @@ const ru: Dict = {
     headingAccent: 'Без воды.',
     sub: 'Большинство агентств продают процесс. Мы продаём результат. Вот что меняется, когда вы работаете с нами.',
     items: [
-      { before: 'Вы получаете одну команду в трёх направлениях, поэтому ', accent: 'ничто не проваливается между строк.', after: '' },
+      { before: 'Вы получаете одну команду в четырёх направлениях, поэтому ', accent: 'ничто не проваливается между строк.', after: '' },
       { before: 'Вы видите реальную работу за ', accent: 'дни, а не месяцы', after: ' — мы отгружаем в плотных недельных циклах.' },
       { before: 'Вам принадлежит всё, что мы создаём — ', accent: 'файлы, материалы, исходный код, аккаунты.', after: '' },
     ],
@@ -600,18 +629,19 @@ const ru: Dict = {
     label: '04 — Команда',
     heading: 'Команда экспертов.',
     headingAccent: 'Один аккаунт-менеджер.',
-    body: 'Инженеры, продюсеры и специалисты поддержки работают над вашим проектом внутри — без субподрядчиков, без посредников. Вы получаете одного менеджера, прямой доступ к команде и канал, который открыт до самого запуска.',
+    body: 'Инженеры, дизайнеры, продюсеры и специалисты поддержки работают над вашим проектом внутри. Вы получаете одного менеджера, прямой доступ к команде и канал, который открыт до самого запуска.',
     stats: [
       { v: '+4 года', l: 'Опыт' },
-      { v: '0', l: 'Субподрядчиков' },
+      { v: 'Касабланка', l: 'Марокко' },
       { v: '100%', l: 'Работа принадлежит вам' },
       { v: '< 24ч', l: 'Время ответа' },
     ],
     roster: [
       { idx: '01', role: 'Разработка & DevOps' },
-      { idx: '02', role: 'Фото, Видео & Моушн' },
-      { idx: '03', role: 'Служба поддержки' },
-      { idx: '04', role: 'Аккаунт & Производство' },
+      { idx: '02', role: 'Бренд & Продуктовый дизайн' },
+      { idx: '03', role: 'Фото, Видео & Моушн' },
+      { idx: '04', role: 'Служба поддержки' },
+      { idx: '05', role: 'Аккаунт & Производство' },
     ],
     rosterLabel: '// roster.json',
     onlineLabel: '● В СЕТИ',
@@ -634,7 +664,7 @@ const ru: Dict = {
   },
   footer: {
     copy: '© {year} Tinmelia Studio',
-    version: 'v2.6 — София / Удалённо',
+    version: 'v2.6 — Касабланка, Марокко',
   },
 }
 
@@ -653,20 +683,24 @@ const pl: Dict = {
     line1: 'Zbudowane by',
     accent: 'działać.',
     line2: 'Stworzone by trwać.',
-    sub: 'Trzy dyscypliny pod jednym dachem: inżynieria, produkcja i wsparcie. Dostarczamy kompletną pracę, od początku do końca.',
+    sub: 'Cztery dyscypliny pod jednym dachem: inżynieria, design, produkcja i wsparcie. Dostarczamy kompletną pracę, od początku do końca.',
     cta: 'Rozpocznij projekt',
     seeServices: 'Zobacz usługi',
     dragHint: 'Przeciągnij, by obrócić',
   },
   services: {
     label: '02 — Usługi',
-    heading: 'Trzy usługi.',
+    heading: 'Cztery usługi.',
     headingAccent: 'Jeden zespół.',
-    sub: 'Ci sami producenci i inżynierowie od kickoffu do premiery. Bez podwykonawców. Bez przekazywania.',
+    sub: 'Ci sami producenci, designerzy i inżynierowie od kickoffu do premiery. Bez przekazywania.',
     items: [
       {
         title: 'Rozwiązania IT',
         body: 'Budujemy systemy, na których opiera się Twój biznes. Od infrastruktury po oprogramowanie na zamówienie — Twój stack pozostaje szybki, bezpieczny i gotowy do skalowania.',
+      },
+      {
+        title: 'Design',
+        body: 'Projektujemy marki, produkty i interfejsy, które działają. Każdy piksel ma sens, każdy system wytrzymuje presję.',
       },
       {
         title: 'Produkcja Foto & Wideo',
@@ -684,7 +718,7 @@ const pl: Dict = {
     headingAccent: 'Bez lania wody.',
     sub: 'Większość agencji sprzedaje proces. My sprzedajemy wynik. Oto co się zmienia, gdy pracujesz z nami.',
     items: [
-      { before: 'Masz jeden zespół w trzech dyscyplinach, więc ', accent: 'nic nie wpada przez szczeliny.', after: '' },
+      { before: 'Masz jeden zespół w czterech dyscyplinach, więc ', accent: 'nic nie wpada przez szczeliny.', after: '' },
       { before: 'Widzisz prawdziwą pracę w ', accent: 'dni, a nie miesiące', after: ' — dostarczamy w ścisłych, tygodniowych cyklach.' },
       { before: 'Jesteś właścicielem wszystkiego, co tworzymy — ', accent: 'pliki, nagrania, kod źródłowy, konta.', after: '' },
     ],
@@ -693,18 +727,19 @@ const pl: Dict = {
     label: '04 — Zespół',
     heading: 'Zespół ekspertów.',
     headingAccent: 'Jeden opiekun konta.',
-    body: 'Inżynierowie, producenci i specjaliści wsparcia pracują nad Twoim projektem wewnętrznie — bez podwykonawców, bez pośredników. Masz jednego opiekuna, bezpośredni dostęp do zespołu i kanał otwarty aż do premiery.',
+    body: 'Inżynierowie, designerzy, producenci i specjaliści wsparcia pracują nad Twoim projektem wewnętrznie. Masz jednego opiekuna, bezpośredni dostęp do zespołu i kanał otwarty aż do premiery.',
     stats: [
       { v: '+4 lata', l: 'Doświadczenie' },
-      { v: '0', l: 'Podwykonawców' },
+      { v: 'Casablanca', l: 'Maroko' },
       { v: '100%', l: 'Praca jest Twoja' },
       { v: '< 24h', l: 'Czas odpowiedzi' },
     ],
     roster: [
       { idx: '01', role: 'Inżynieria & DevOps' },
-      { idx: '02', role: 'Foto, Wideo & Motion' },
-      { idx: '03', role: 'Pomoc Techniczna & Wsparcie' },
-      { idx: '04', role: 'Konto & Produkcja' },
+      { idx: '02', role: 'Marka & Projektowanie Produktu' },
+      { idx: '03', role: 'Foto, Wideo & Motion' },
+      { idx: '04', role: 'Pomoc Techniczna & Wsparcie' },
+      { idx: '05', role: 'Konto & Produkcja' },
     ],
     rosterLabel: '// roster.json',
     onlineLabel: '● ONLINE',
@@ -727,7 +762,7 @@ const pl: Dict = {
   },
   footer: {
     copy: '© {year} Tinmelia Studio',
-    version: 'v2.6 — Sofia / Zdalnie',
+    version: 'v2.6 — Casablanca, Maroko',
   },
 }
 
