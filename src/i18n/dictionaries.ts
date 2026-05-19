@@ -38,7 +38,7 @@ export type Dict = {
     heading: string
     headingAccent: string
     sub: string
-    items: [ServiceItem, ServiceItem, ServiceItem, ServiceItem]
+    items: [ServiceItem, ServiceItem, ServiceItem, ServiceItem, ServiceItem]
   }
   why: {
     label: string
@@ -95,14 +95,14 @@ const en: Dict = {
     line1: 'Built to',
     accent: 'perform.',
     line2: 'Made to last.',
-    sub: 'Four disciplines under one roof: engineering, design, production, and support. We ship complete work, end to end.',
+    sub: 'Five disciplines under one roof: engineering, design, production, support, and training. We ship complete work, end to end.',
     cta: 'Start a project',
     seeServices: 'See services',
     dragHint: 'Drag to rotate',
   },
   services: {
     label: '02 — Services',
-    heading: 'Four services.',
+    heading: 'Five services.',
     headingAccent: 'One team.',
     sub: 'You get the same producers, designers, and engineers from kickoff to launch. No handoffs.',
     items: [
@@ -122,6 +122,10 @@ const en: Dict = {
         title: 'Help Desk',
         body: 'We are your first and last line of support. Issues get logged, tracked, and resolved — fast, with a human on the other end.',
       },
+      {
+        title: 'IT Training',
+        body: 'We train your team on the tools, systems, and workflows that matter. From onboarding to advanced sessions, your people leave ready to execute.',
+      },
     ],
   },
   why: {
@@ -130,7 +134,7 @@ const en: Dict = {
     headingAccent: 'No fluff.',
     sub: 'Most agencies sell process. We sell output. Here is what changes when you work with us.',
     items: [
-      { before: 'You get one team across four disciplines, so ', accent: 'nothing falls between the cracks.', after: '' },
+      { before: 'You get one team across five disciplines, so ', accent: 'nothing falls between the cracks.', after: '' },
       { before: 'You see real work in ', accent: 'days, not months', after: ' — we ship in tight, weekly cycles.' },
       { before: 'You own everything we make — ', accent: 'files, footage, source code, accounts.', after: '' },
     ],
@@ -193,14 +197,14 @@ const ar: Dict = {
     line1: 'بُني للأداء',
     accent: 'والإتقان.',
     line2: 'صُنع ليدوم.',
-    sub: 'أربعة تخصصات تحت سقف واحد: هندسة، تصميم، إنتاج، ودعم. نُسلّم عملًا متكاملًا من البداية للنهاية.',
+    sub: 'خمسة تخصصات تحت سقف واحد: هندسة، تصميم، إنتاج، دعم، وتدريب. نُسلّم عملًا متكاملًا من البداية للنهاية.',
     cta: 'ابدأ مشروعًا',
     seeServices: 'استعرض الخدمات',
     dragHint: 'اسحب للتدوير',
   },
   services: {
     label: '02 — الخدمات',
-    heading: 'أربع خدمات.',
+    heading: 'خمس خدمات.',
     headingAccent: 'فريق واحد.',
     sub: 'تحصل على نفس المنتجين والمصممين والمهندسين من البداية حتى الإطلاق. لا تسليمات.',
     items: [
@@ -220,6 +224,10 @@ const ar: Dict = {
         title: 'مكتب المساعدة',
         body: 'نحن خط الدعم الأول والأخير. تُسجَّل المشكلات وتُتابَع وتُحَل بسرعة، ودائمًا بإنسان حقيقي في الطرف الآخر.',
       },
+      {
+        title: 'التدريب التقني',
+        body: 'ندرّب فريقك على الأدوات والأنظمة التي تهم. من جلسات التأهيل إلى التدريب المتقدم، يغادر موظفوك كل جلسة جاهزين للتنفيذ.',
+      },
     ],
   },
   why: {
@@ -228,7 +236,7 @@ const ar: Dict = {
     headingAccent: 'بلا حشو.',
     sub: 'معظم الوكالات تبيع عمليات. نحن نبيع نتائج. إليك ما يتغير حين تعمل معنا.',
     items: [
-      { before: 'تحصل على فريق واحد عبر أربعة تخصصات، لذا ', accent: 'لا شيء يضيع بين الثغرات.', after: '' },
+      { before: 'تحصل على فريق واحد عبر خمسة تخصصات، لذا ', accent: 'لا شيء يضيع بين الثغرات.', after: '' },
       { before: 'ترى عملًا حقيقيًا في ', accent: 'أيام، لا شهور', after: ' — نشحن في دورات أسبوعية محكمة.' },
       { before: 'تمتلك كل ما نصنعه — ', accent: 'الملفات، اللقطات، الكود المصدري، الحسابات.', after: '' },
     ],
@@ -291,14 +299,14 @@ const es: Dict = {
     line1: 'Construido para',
     accent: 'rendir.',
     line2: 'Hecho para durar.',
-    sub: 'Cuatro disciplinas bajo un mismo techo: ingeniería, diseño, producción y soporte. Entregamos trabajo completo, de principio a fin.',
+    sub: 'Cinco disciplinas bajo un mismo techo: ingeniería, diseño, producción, soporte y formación. Entregamos trabajo completo, de principio a fin.',
     cta: 'Iniciar proyecto',
     seeServices: 'Ver servicios',
     dragHint: 'Arrastra para rotar',
   },
   services: {
     label: '02 — Servicios',
-    heading: 'Cuatro servicios.',
+    heading: 'Cinco servicios.',
     headingAccent: 'Un equipo.',
     sub: 'Los mismos productores, diseñadores e ingenieros desde el inicio hasta el lanzamiento. Sin traspasos.',
     items: [
@@ -318,6 +326,10 @@ const es: Dict = {
         title: 'Mesa de Ayuda',
         body: 'Somos tu primera y última línea de soporte. Los problemas se registran, rastrean y resuelven rápido, con una persona real al otro lado.',
       },
+      {
+        title: 'Formación en IT',
+        body: 'Formamos a tu equipo en las herramientas, sistemas y flujos de trabajo que importan. Desde la incorporación hasta las sesiones avanzadas, tu equipo sale listo para ejecutar.',
+      },
     ],
   },
   why: {
@@ -326,7 +338,7 @@ const es: Dict = {
     headingAccent: 'Sin relleno.',
     sub: 'La mayoría de las agencias venden procesos. Nosotros vendemos resultados. Esto es lo que cambia cuando trabajas con nosotros.',
     items: [
-      { before: 'Tienes un equipo en cuatro disciplinas, así que ', accent: 'nada cae entre las grietas.', after: '' },
+      { before: 'Tienes un equipo en cinco disciplinas, así que ', accent: 'nada cae entre las grietas.', after: '' },
       { before: 'Ves trabajo real en ', accent: 'días, no meses', after: ' — entregamos en ciclos semanales ajustados.' },
       { before: 'Eres dueño de todo lo que hacemos — ', accent: 'archivos, metraje, código fuente, cuentas.', after: '' },
     ],
@@ -389,14 +401,14 @@ const fr: Dict = {
     line1: 'Conçu pour',
     accent: 'performer.',
     line2: 'Fait pour durer.',
-    sub: 'Quatre disciplines sous un même toit : ingénierie, design, production et support. Nous livrons un travail complet, de bout en bout.',
+    sub: 'Cinq disciplines sous un même toit : ingénierie, design, production, support et formation. Nous livrons un travail complet, de bout en bout.',
     cta: 'Démarrer un projet',
     seeServices: 'Voir les services',
     dragHint: 'Glisser pour pivoter',
   },
   services: {
     label: '02 — Services',
-    heading: 'Quatre services.',
+    heading: 'Cinq services.',
     headingAccent: 'Une équipe.',
     sub: 'Les mêmes producteurs, designers et ingénieurs du lancement au déploiement. Pas de transferts.',
     items: [
@@ -416,6 +428,10 @@ const fr: Dict = {
         title: "Service d'Assistance",
         body: "Nous sommes votre première et dernière ligne de support. Les problèmes sont enregistrés, suivis et résolus rapidement, avec un humain à l'autre bout.",
       },
+      {
+        title: 'Formation IT',
+        body: 'Nous formons votre équipe sur les outils, systèmes et workflows qui comptent. Des sessions d'intégration aux formations avancées, vos collaborateurs repartent prêts à agir.',
+      },
     ],
   },
   why: {
@@ -424,7 +440,7 @@ const fr: Dict = {
     headingAccent: 'Sans rembourrage.',
     sub: 'La plupart des agences vendent un processus. Nous vendons des résultats. Voici ce qui change quand vous travaillez avec nous.',
     items: [
-      { before: 'Vous avez une équipe sur quatre disciplines, donc ', accent: 'rien ne tombe dans les failles.', after: '' },
+      { before: 'Vous avez une équipe sur cinq disciplines, donc ', accent: 'rien ne tombe dans les failles.', after: '' },
       { before: 'Vous voyez un vrai travail en ', accent: 'jours, pas en mois', after: ' — nous livrons en cycles hebdomadaires serrés.' },
       { before: 'Vous possédez tout ce que nous créons — ', accent: 'fichiers, séquences, code source, comptes.', after: '' },
     ],
@@ -487,14 +503,14 @@ const zh: Dict = {
     line1: '专为',
     accent: '高效而生。',
     line2: '经久不衰。',
-    sub: '四大专业融于一体：工程、设计、制作与支持。我们从头到尾交付完整的工作成果。',
+    sub: '五大专业融于一体：工程、设计、制作、支持与培训。我们从头到尾交付完整的工作成果。',
     cta: '开始项目',
     seeServices: '查看服务',
     dragHint: '拖动旋转',
   },
   services: {
     label: '02 — 服务',
-    heading: '四项服务。',
+    heading: '五项服务。',
     headingAccent: '一支团队。',
     sub: '从启动到发布，同一批制作人、设计师和工程师全程陪伴。无交接。',
     items: [
@@ -514,6 +530,10 @@ const zh: Dict = {
         title: '服务台支持',
         body: '我们是您的第一道也是最后一道支持防线。问题被记录、跟踪并快速解决——始终有真人在另一端响应。',
       },
+      {
+        title: 'IT 培训',
+        body: '我们对您的团队进行工具、系统和工作流程方面的培训。从入职培训到高级课程，您的员工在每次培训后都能立即投入执行。',
+      },
     ],
   },
   why: {
@@ -522,7 +542,7 @@ const zh: Dict = {
     headingAccent: '直接了当。',
     sub: '大多数代理机构兜售流程，我们兜售成果。以下是与我们合作后的改变。',
     items: [
-      { before: '您拥有一支覆盖四个专业的团队，因此 ', accent: '没有任何事情会被遗漏。', after: '' },
+      { before: '您拥有一支覆盖五个专业的团队，因此 ', accent: '没有任何事情会被遗漏。', after: '' },
       { before: '您能在 ', accent: '几天内，而非几个月', after: ' 看到真实成果——我们采用紧凑的每周迭代交付。' },
       { before: '我们创作的一切均归您所有—— ', accent: '文件、素材、源代码、账号。', after: '' },
     ],
@@ -585,14 +605,14 @@ const ru: Dict = {
     line1: 'Создано для',
     accent: 'результата.',
     line2: 'Сделано навсегда.',
-    sub: 'Четыре направления под одной крышей: разработка, дизайн, производство и поддержка. Мы сдаём законченный продукт — от начала до конца.',
+    sub: 'Пять направлений под одной крышей: разработка, дизайн, производство, поддержка и обучение. Мы сдаём законченный продукт — от начала до конца.',
     cta: 'Начать проект',
     seeServices: 'Посмотреть услуги',
     dragHint: 'Перетащить для вращения',
   },
   services: {
     label: '02 — Услуги',
-    heading: 'Четыре услуги.',
+    heading: 'Пять услуг.',
     headingAccent: 'Одна команда.',
     sub: 'Одни и те же продюсеры, дизайнеры и инженеры от старта до запуска. Без передачи.',
     items: [
@@ -612,6 +632,10 @@ const ru: Dict = {
         title: 'Служба поддержки',
         body: 'Мы — ваша первая и последняя линия поддержки. Проблемы фиксируются, отслеживаются и решаются быстро, с живым человеком на другом конце.',
       },
+      {
+        title: 'IT-обучение',
+        body: 'Мы обучаем вашу команду инструментам, системам и рабочим процессам, которые имеют значение. От вводных сессий до продвинутых курсов — ваши люди уходят готовыми к работе.',
+      },
     ],
   },
   why: {
@@ -620,7 +644,7 @@ const ru: Dict = {
     headingAccent: 'Без воды.',
     sub: 'Большинство агентств продают процесс. Мы продаём результат. Вот что меняется, когда вы работаете с нами.',
     items: [
-      { before: 'Вы получаете одну команду в четырёх направлениях, поэтому ', accent: 'ничто не проваливается между строк.', after: '' },
+      { before: 'Вы получаете одну команду в пяти направлениях, поэтому ', accent: 'ничто не проваливается между строк.', after: '' },
       { before: 'Вы видите реальную работу за ', accent: 'дни, а не месяцы', after: ' — мы отгружаем в плотных недельных циклах.' },
       { before: 'Вам принадлежит всё, что мы создаём — ', accent: 'файлы, материалы, исходный код, аккаунты.', after: '' },
     ],
@@ -683,14 +707,14 @@ const pl: Dict = {
     line1: 'Zbudowane by',
     accent: 'działać.',
     line2: 'Stworzone by trwać.',
-    sub: 'Cztery dyscypliny pod jednym dachem: inżynieria, design, produkcja i wsparcie. Dostarczamy kompletną pracę, od początku do końca.',
+    sub: 'Pięć dyscyplin pod jednym dachem: inżynieria, design, produkcja, wsparcie i szkolenia. Dostarczamy kompletną pracę, od początku do końca.',
     cta: 'Rozpocznij projekt',
     seeServices: 'Zobacz usługi',
     dragHint: 'Przeciągnij, by obrócić',
   },
   services: {
     label: '02 — Usługi',
-    heading: 'Cztery usługi.',
+    heading: 'Pięć usług.',
     headingAccent: 'Jeden zespół.',
     sub: 'Ci sami producenci, designerzy i inżynierowie od kickoffu do premiery. Bez przekazywania.',
     items: [
@@ -710,6 +734,10 @@ const pl: Dict = {
         title: 'Pomoc Techniczna',
         body: 'Jesteśmy Twoją pierwszą i ostatnią linią wsparcia. Zgłoszenia są rejestrowane, śledzone i rozwiązywane szybko — zawsze przez człowieka.',
       },
+      {
+        title: 'Szkolenia IT',
+        body: 'Szkolimy Twój zespół z narzędzi, systemów i procesów, które mają znaczenie. Od sesji wdrożeniowych po zaawansowane warsztaty — Twoi ludzie wychodzą gotowi do działania.',
+      },
     ],
   },
   why: {
@@ -718,7 +746,7 @@ const pl: Dict = {
     headingAccent: 'Bez lania wody.',
     sub: 'Większość agencji sprzedaje proces. My sprzedajemy wynik. Oto co się zmienia, gdy pracujesz z nami.',
     items: [
-      { before: 'Masz jeden zespół w czterech dyscyplinach, więc ', accent: 'nic nie wpada przez szczeliny.', after: '' },
+      { before: 'Masz jeden zespół w pięciu dyscyplinach, więc ', accent: 'nic nie wpada przez szczeliny.', after: '' },
       { before: 'Widzisz prawdziwą pracę w ', accent: 'dni, a nie miesiące', after: ' — dostarczamy w ścisłych, tygodniowych cyklach.' },
       { before: 'Jesteś właścicielem wszystkiego, co tworzymy — ', accent: 'pliki, nagrania, kod źródłowy, konta.', after: '' },
     ],

@@ -34,6 +34,21 @@ function GlyphPhoto() {
   )
 }
 
+function GlyphTraining() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      {/* screen */}
+      <rect x="2" y="3" width="24" height="16" rx="2" stroke="var(--accent)" strokeWidth="1" />
+      {/* play triangle */}
+      <path d="M11 8 L11 14 L18 11 Z" fill="var(--accent)" />
+      {/* stand stem */}
+      <path d="M14 19 L14 23" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" />
+      {/* base */}
+      <path d="M9 23 L19 23" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  )
+}
+
 function GlyphHelpDesk() {
   return (
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -51,7 +66,7 @@ function GlyphHelpDesk() {
   )
 }
 
-const GLYPHS: Array<() => React.ReactElement> = [GlyphIT, GlyphDesign, GlyphPhoto, GlyphHelpDesk]
+const GLYPHS: Array<() => React.ReactElement> = [GlyphIT, GlyphDesign, GlyphPhoto, GlyphHelpDesk, GlyphTraining]
 
 // ── tilt card ─────────────────────────────────────────────────────────────────
 
@@ -191,7 +206,7 @@ function ServiceCard({
 
 // ── section ───────────────────────────────────────────────────────────────────
 
-const NUMS = ['01 / IT', '02 / DSN', '03 / P+V', '04 / HELP']
+const NUMS = ['01 / IT', '02 / DSN', '03 / P+V', '04 / HELP', '05 / TRN']
 
 export default function Services() {
   const { services } = useDict()
