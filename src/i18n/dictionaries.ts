@@ -430,7 +430,7 @@ const fr: Dict = {
       },
       {
         title: 'Formation IT',
-        body: 'Nous formons votre équipe sur les outils, systèmes et workflows qui comptent. Des sessions d'intégration aux formations avancées, vos collaborateurs repartent prêts à agir.',
+        body: "Nous formons votre équipe sur les outils, systèmes et workflows qui comptent. Des sessions d'intégration aux formations avancées, vos collaborateurs repartent prêts à agir.",
       },
     ],
   },
